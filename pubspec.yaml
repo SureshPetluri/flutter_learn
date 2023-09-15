@@ -43,6 +43,8 @@ dependencies:
   flutter_screenutil: ^5.8.4
   intl:
   cloud_firestore:
+  info_popup: ^3.0.6
+  flutter_portal: ^1.1.4
 dev_dependencies:
   flutter_test:
     sdk: flutter
