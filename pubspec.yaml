@@ -45,6 +45,9 @@ dependencies:
   cloud_firestore:
   info_popup: ^3.0.6
   flutter_portal: ^1.1.4
+
+#  getx Internationalization
+  get: ^4.6.6
 dev_dependencies:
   flutter_test:
     sdk: flutter
