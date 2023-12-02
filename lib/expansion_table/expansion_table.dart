@@ -90,7 +90,7 @@ class _ExpandTableState extends State<ExpandTable> {
                       "Table Expansion",
                       style: TextStyle(color: Colors.black, fontSize: 30),
                     ))
-                : SizedBox(),
+                : const SizedBox(),
             Table(
               children: [
                 const TableRow(children: [

@@ -6,6 +6,7 @@ void main() => runApp( const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  @override
   Widget build(BuildContext context) => const MaterialApp(home: AnimationImage());
 }
 
@@ -27,7 +28,7 @@ class _AnimationImageState extends State<AnimationImage>
   @override
   void initState() {
     controller = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 5000,));
+        vsync: this, duration: const Duration(milliseconds: 5000,));
 
     animation = Tween(begin: 0.0, end: 400.0).animate(controller)
       ..addListener(() {
@@ -41,7 +42,7 @@ class _AnimationImageState extends State<AnimationImage>
   Widget build(BuildContext context) {
     return Scaffold(body: Container(
 
-      padding: EdgeInsets.all(32.0),
+      padding: const EdgeInsets.all(32.0),
       height: animation.value,
       width: animation.value,
       child: Center(

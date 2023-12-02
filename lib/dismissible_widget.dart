@@ -7,12 +7,14 @@ void main() {
 class MyApp extends StatelessWidget {
   final List<String> items = List.generate(10, (index) => 'Item $index');
 
+  MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Dismissible Example'),
+          title: const Text('Dismissible Example'),
         ),
         body: ListView.builder(
           itemCount: items.length,
@@ -26,17 +28,17 @@ class MyApp extends StatelessWidget {
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog.adaptive(
-                      title: Text('Confirm Delete'),
+                      title: const Text('Confirm Delete'),
                       content: Text('Are you sure you want to delete $item?'),
                       actions: <Widget>[
                         ElevatedButton(
-                          child: Text('Cancel'),
+                          child: const Text('Cancel'),
                           onPressed: () {
                             Navigator.of(context).pop(false); // Don't dismiss
                           },
                         ),
                         ElevatedButton(
-                          child: Text('Delete'),
+                          child: const Text('Delete'),
                           onPressed: () {
                             Navigator.of(context).pop(true); // Dismiss
                           },
@@ -50,8 +52,8 @@ class MyApp extends StatelessWidget {
               background: Container(
                 color: Colors.red,
                 alignment: Alignment.centerRight,
-                padding: EdgeInsets.only(right: 20.0),
-                child: Icon(
+                padding: const EdgeInsets.only(right: 20.0),
+                child: const Icon(
                   Icons.delete,
                   color: Colors.white,
                 ),

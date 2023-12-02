@@ -1,11 +1,5 @@
-import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/animation.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
-import 'package:vector_math/vector_math_64.dart' show Vector3;
 
 class PinchZoomImage extends StatefulWidget {
   const PinchZoomImage({Key? key}) : super(key: key);
@@ -34,7 +28,7 @@ class _PinchZoomImageState extends State<PinchZoomImage>
     controller = TransformationController();
     animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 200),
     )..addListener(() => controller.value = animation!.value)
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
@@ -135,7 +129,7 @@ class _PinchZoomImageState extends State<PinchZoomImage>
       },
     );
 
-    final overlay = Overlay.of(context)!;
+    final overlay = Overlay.of(context);
     overlay.insert(entry!);
   }
 

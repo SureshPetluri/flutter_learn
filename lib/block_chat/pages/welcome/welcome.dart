@@ -21,7 +21,7 @@ class _WelcomeState extends State<Welcome> {
       color: Colors.white,
       child: Scaffold(
         body: BlocBuilder<WelcomeBloc, WelcomeState>(
-          builder: (context, state) => Container(
+          builder: (context, state) => SizedBox(
             width: 375.w,
             child: Stack(
               children: [
@@ -125,7 +125,7 @@ class _WelcomeState extends State<Welcome> {
           padding: EdgeInsets.only(left: 30.w, right: 30.w),
           child: Text(
             subTitle,
-            style: TextStyle(color: Colors.black),
+            style: const TextStyle(color: Colors.black),
           ),
         ),
         GestureDetector(
@@ -152,7 +152,7 @@ class _WelcomeState extends State<Welcome> {
                     color: Colors.grey.withOpacity(0.3),
                     spreadRadius: 1,
                     blurRadius: 2,
-                    offset: Offset(10, 10),
+                    offset: const Offset(10, 10),
                   )
                 ]),
             child: Center(

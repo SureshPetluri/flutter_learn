@@ -34,14 +34,14 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login Page'),
+        title: const Text('Login Page'),
       ),
       body: BlocProvider(
         create: (context) => _loginBloc,
         child: BlocConsumer<LoginBloc, LoginState>(
           listener: (context, state) {
             if (state is LoginLoading) {
-              CircularProgressIndicator();
+              const CircularProgressIndicator();
             } else if (state is LoginSuccess) {
               // Handle successful login
               const snackBar = SnackBar(content: Text("Success"));
@@ -60,14 +60,14 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   TextField(
                     controller: _usernameController,
-                    decoration: InputDecoration(labelText: 'Username'),
+                    decoration: const InputDecoration(labelText: 'Username'),
                   ),
                   TextField(
                     controller: _passwordController,
-                    decoration: InputDecoration(labelText: 'Password'),
+                    decoration: const InputDecoration(labelText: 'Password'),
                     obscureText: true,
                   ),
-                  SizedBox(height: 20.0),
+                  const SizedBox(height: 20.0),
                   ElevatedButton(
                     onPressed: () {
                       _loginBloc.add(
@@ -77,10 +77,10 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       );
                     },
-                    child: Text('Login'),
+                    child: const Text('Login'),
                   ),
-                  if (state is LoginLoading) SizedBox(height: 20.0),
-                  if (state is LoginLoading) CircularProgressIndicator(),
+                  if (state is LoginLoading) const SizedBox(height: 20.0),
+                  if (state is LoginLoading) const CircularProgressIndicator(),
                 ],
               ),
             );

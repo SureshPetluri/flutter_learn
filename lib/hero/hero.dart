@@ -4,14 +4,20 @@ const imageUrl =
     'https://images.unsplash.com/photo-1622393168445-ed318ea0554f?w=1024&q=80';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  Widget build(BuildContext context) => MaterialApp(home: MasterPage());
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) => const MaterialApp(home: MasterPage());
 }
 
 class MasterPage extends StatelessWidget {
+  const MasterPage({super.key});
+
+  @override
   Widget build(BuildContext context) => Scaffold(
     body: Padding(
       padding: const EdgeInsets.all(16),
@@ -27,7 +33,7 @@ class MasterPage extends StatelessWidget {
         ),
         onTap: () => Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => DetailPage()),
+          MaterialPageRoute(builder: (context) => const DetailPage()),
         ),
       ),
     ),
@@ -35,6 +41,9 @@ class MasterPage extends StatelessWidget {
 }
 
 class DetailPage extends StatelessWidget {
+  const DetailPage({super.key});
+
+  @override
   Widget build(BuildContext context) => Scaffold(
     body: Stack(
       children: [

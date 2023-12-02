@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void main() async {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: MyPage());
+        home: const MyPage());
   }
 }
 
@@ -28,7 +28,7 @@ class Login extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            padding: EdgeInsets.only(bottom: 20),
+            padding: const EdgeInsets.only(bottom: 20),
             decoration: const BoxDecoration(
               color: Colors.green,
               borderRadius: BorderRadius.only(
@@ -65,6 +65,8 @@ class Login extends StatelessWidget {
 }
 
 class MyPage extends StatelessWidget {
+  const MyPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,10 +100,10 @@ class MyPage extends StatelessWidget {
                       topRight: Radius.circular(30),
                     ),
                     border: Border.all(
-                      color: Color(0xff0099cc),
+                      color: const Color(0xff0099cc),
                       width: 1.0,
                     ),
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
@@ -124,7 +126,7 @@ class MyPage extends StatelessWidget {
                           "Sign In",
                           style: TextStyle(color:Colors.white,fontSize: 28,fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 40,
                         ),
                         TextFormField(
@@ -152,7 +154,7 @@ class MyPage extends StatelessWidget {
                         ),
                         Center(
                             child: ElevatedButton(
-                                onPressed: () {}, child: Text("Submit"))),
+                                onPressed: () {}, child: const Text("Submit"))),
                         // Spacer(),
                       ],
                     ),
@@ -165,7 +167,7 @@ class MyPage extends StatelessWidget {
   }
 
   InputDecoration buildInputDecorationTheme() {
-    return InputDecoration(
+    return const InputDecoration(
       filled: true,
       fillColor: Color(0xffE9EFFF),
       border: OutlineInputBorder(

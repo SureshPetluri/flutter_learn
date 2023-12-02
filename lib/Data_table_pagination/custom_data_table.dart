@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CustomDataTable(myData:  [
+      home: CustomDataTable(myData:  const [
         {
           "sno": '1',
           "age": '20',
@@ -99,7 +101,7 @@ class MyApp extends StatelessWidget {
           "rollss": '101',
           "rollsss": '101',
         },
-      ],headers:['S.No','Age','Name','Roll',"'Rolls'",'Rollsss','Rollsss',]),
+      ],headers:const ['S.No','Age','Name','Roll',"'Rolls'",'Rollsss','Rollsss',]),
     );
   }
 }
@@ -120,7 +122,7 @@ class CustomDataTable extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Digit Selector'),
+        title: const Text('Digit Selector'),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
@@ -185,12 +187,12 @@ class CustomDataTable extends StatelessWidget {
                           _scrollToCenter(selectedDigit);
                         }
                       },
-                      icon: Icon(Icons.arrow_back_ios_new)),
+                      icon: const Icon(Icons.arrow_back_ios_new)),
                   Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Container(
+                        SizedBox(
                           height: 50,
                           width: 280,
                           child: ListView(
@@ -210,7 +212,7 @@ class CustomDataTable extends StatelessWidget {
                                 child: Container(
                                   width: 30,
                                   height: 30,
-                                  margin: EdgeInsets.symmetric(horizontal: 5),
+                                  margin: const EdgeInsets.symmetric(horizontal: 5),
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       color: selectedDigit == digit
@@ -219,7 +221,7 @@ class CustomDataTable extends StatelessWidget {
                                   child: Center(
                                     child: Text(
                                       digit.toString(),
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 12,
                                       ),
@@ -241,7 +243,7 @@ class CustomDataTable extends StatelessWidget {
                           _scrollToCenter(selectedDigit);
                         }
                       },
-                      icon: Icon(Icons.arrow_forward_ios_sharp))
+                      icon: const Icon(Icons.arrow_forward_ios_sharp))
                 ],
               ),
             ),
