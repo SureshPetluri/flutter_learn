@@ -1,0 +1,24 @@
+const String APP_NAME = "Smart Crop";
+const String DATA = 'data';
+const String SIGN_IN_REPO = "SignInRepo";
+const String Auth_Repo = "AuthRepository";
+const String EMAIL = "email";
+const String PASSWORD = "password";
+const String LOGIN = "login";
+const String ROOT = "root";
+const String APPLICATION_JSON = "application/json";
+const String AUTHORIZATION = "Authorization";
+const String CONTENT_TYPE = "Content-Type";
+const String OAUTH_BEARER = "Bearer ";
+const String OAUTH_BASIC = "Basic ";
+const String APPLICATION_URL = "application/x-www-form-urlencoded";
+const String base_url = "http://localhost:3000";
+const String register = "/userRegistration";
+const String login = "/Login";
+const String status = "status";
+const String data = "data";
+const String message = "message";
+const String myLearning = "My learning";
+const String help = "Help";
+const String logout = "Log Out";
+

@@ -21,7 +21,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final ScrollController _scrollController = ScrollController();
   final double itemWidth = 200.0; // Adjust the item width based on your design
-  final int itemCount = 10;
 
   @override
   void initState() {
@@ -51,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Auto-scrolling ListView'),
+        title: const Text('Auto-scrolling ListView'),
       ),
       body: ListView.builder(
         controller: _scrollController,
@@ -59,15 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
         itemCount: 10, // Double the itemCount for loop effect
         itemBuilder: (context, index) {
           // Replace the Container with your custom widget for each item
-          final adjustedIndex = index;
           return Container(
             height: itemWidth,
             color: Colors.blue,
-            margin: EdgeInsets.all(8.0),
+            margin: const EdgeInsets.all(8.0),
             child: Center(
               child: Text(
-                'Item $adjustedIndex',
-                style: TextStyle(color: Colors.white),
+                'Item $index',
+                style: const TextStyle(color: Colors.white),
               ),
             ),
           );

@@ -38,6 +38,18 @@ dependencies:
   cupertino_icons: ^1.0.2
   get_storage: ^2.1.1
   flip_panel_plus: ^1.0.0+3
+
+#  skeleton
+
+  country_code_picker: ^3.0.0
+  qr_code_scanner: ^1.0.1
+  flutter_local_notifications: ^16.1.0
+  jwt_decoder: ^2.0.1
+  package_info_plus: ^4.2.0
+  url_launcher: ^6.1.14
+  file_picker: ^6.0.0
+  geolocator: ^10.1.0
+  image_picker: ^1.0.4
 #bloc_chat
   flutter_bloc: ^8.1.3
   flutter_screenutil: ^5.8.4
@@ -45,6 +57,10 @@ dependencies:
   cloud_firestore:
   info_popup: ^3.0.6
   flutter_portal: ^1.1.4
+  # firebase configuration
+  firebase_core: ^2.17.0
+  firebase_messaging: ^14.6.9
+  firebase_analytics: ^10.5.1
 
 #  getx Internationalization
   get: ^4.6.6
