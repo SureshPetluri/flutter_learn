@@ -118,7 +118,7 @@ class _MyAppState extends State<MyApp> {
   ThemeData buildTheme(BuildContext context) {
     var themeData = Theme.of(context);
     return themeData.copyWith(
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),
         ),
